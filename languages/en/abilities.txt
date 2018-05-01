@@ -1,0 +1,1097 @@
+FFTSQUIRE-Title=Squire
+FFTSQUIRE-Ability=Basic Skill
+FFTSQUIRE-Desc=This job serves as the foundation for all others, forming the first step on the road to becoming a legendary warrior.
+
+FFTSQUIRE-DASH=Dash
+FFTSQUIRE-DASH-desc=Attack by ramming into the enemy's body.
+
+FFTSQUIRE-THROWSTONE=Throw Stone
+FFTSQUIRE-THROWSTONE-desc=Lob a stone at a far-off foe.
+
+FFTSQUIRE-HEAL=Heal
+FFTSQUIRE-HEAL-desc=Remove several status ailments.
+
+FFTSQUIRE-ACCUMULATE=Accumulate
+FFTSQUIRE-ACCUMULATE-desc=Increase physical attack power.
+
+FFTSQUIRE-MOVE1=Move +1
+FFTSQUIRE-MOVE1-desc=Increase Move by 1.
+
+FFTSQUIRE-DEFEND=Defend
+FFTSQUIRE-DEFEND-desc=Defend oneself against an attack.
+
+FFTSQUIRE-TACKLE=Counter Tackle
+FFTSQUIRE-TACKLE-desc=Counterattack with a tackle.
+
+; ********************************
+; Common strings
+; ********************************
+; Strings that other strings use to build upon.
+damage-single-opener=Deals {powerratio} {elem} damage to the target
+damage-aoe-opener=Deals {powerratio} {elem} damage in a {size} area
+damage-line-opener=Deals {powerratio} {elem} damage in a line
+heal-small-opener=Restores {powerratio} {hp}
+heal-aoe-opener=Restores {powerratio} {hp} in a {size} area
+add-negative-effect-closer=and has a chance of inflicting {addnegative}.
+status-chance-negative-aoe-opener=Has a chance of inflicting {addnegative} in a {size} area
+
+
+; Common descriptions
+damage-with-negative={load=damage-single-opener} and inflicts {addnegative}.
+damage-with-chance-negative={load=damage-single-opener} {load=add-negative-effect-closer}
+damage-single={load=damage-single-opener}.
+damage-burst={load=damage-aoe-opener} around the character.
+damage-aoe={load=damage-aoe-opener}.
+damage-line={load=damage-line-opener}.
+status-chance-negative=Has a chance of inflicting {addnegative} on the target.
+status-chance-negative-aoe={load=status-chance-negative-aoe-opener}.
+status-negative=Inflicts {addnegative} on the target.
+status-positive=Grants {addpositive} to the target.
+status-aoe-positive=Grants {addpositive} in a a {size} area.
+status-positive-critical-counter-append=to the character when {hp} is {critical-hp} after taking damage.
+revive-ally=Revives an ally on the given tile and restores {percent} {hp}.
+multi-damage-with-negative={load=damage-aoe-opener} {load=add-negative-effect-closer}
+damage-single-range-chance-negative={load=damage-single-opener} from a distance {load=add-negative-effect-closer}
+status-negative-remove=Removes {removenegative} from the target.
+trap-status=Character lays down a trap that will inflict {addnegative} and immediately end the turn of any enemy that steps on it.
+heal-single=Restores {powerratio} {hp} to the target.
+heal-aoe={load=heal-aoe-opener}.
+damage-all=Deals {powerratio} {elem} damage to everyone on the map.
+damage-line-negative={load=damage-line-opener} {load=add-negative-effect-closer}
+counter-offensive-action=Counters any offensive action taken on the character
+counter-offensive-action-adjacent={counter-offensive-action} by an adjacent unit
+counter-by-inflicting=by inflicting the offender with
+counter-with-negative-status={counter-offensive-action} {counter-by-inflicting}
+
+damage-increase-with-debuff=Damage increases for each {debuff} the target is inflicted with.
+
+;Extras
+size-small=small
+size-large=large
+
+; ********************************
+; Mercenary
+; ********************************
+; Job
+MERC-Title=Mercenary
+MERC-Ability=War Craft
+MERC-Desc=These fighters are versed in all manner of warcraft. They know that combat can be a fickle thing and are prepared for whatever situation is thrown at them.
+
+; Abilities
+MERC-A1=Field Aid
+MERC-A1-desc={load=heal-small-opener} and removes {removenegative}.
+
+MERC-A2=Forceful Strike
+MERC-A2-desc=Deals {powerratio} {elem} damage and pushes the target away by one tile. Depending on the terrain, this could have interesting results.
+
+MERC-A3=Strike Power
+MERC-A3-desc={damage-with-negative}
+
+MERC-A4=Strike Mind
+MERC-A4-desc={damage-with-negative}
+
+MERC-A5=Precise Strike
+MERC-A5-desc={load=damage-single-opener} with 100% accuracy (cannot miss).
+
+MERC-A6=Flash Strike
+MERC-A6-desc={load=damage-single-opener} and bypasses all counter abilities.
+
+MERC-A7=Stunning Strike
+MERC-A7-desc={load=damage-single-opener} and delays their next turn.
+
+; Passives
+MERC-P1=Sturdy Grip
+MERC-P1-desc=Allows the character to hold a two-handed weapon in one hand.
+
+MERC-P2=Heavy Blows
+MERC-P2-desc=Increases {critical-hit} damage by 50%.
+
+; Counter
+MERC-C1=Counter
+MERC-C1-desc=Counters any offensive action taken against the character by an adjacent unit.
+
+
+; ********************************
+; Knight
+; ********************************
+; Job
+KNIG-Title=Knight
+KNIG-Ability=Chivalry
+KNIG-Desc=These champions protect the weak and can shrug off even the most powerful of blows.
+
+; Abilities
+KNIG-A1=Defend
+KNIG-A1-desc=Character takes half damage from all attacks until their next turn.
+
+KNIG-A2=Protect
+KNIG-A2-desc=Character protects a target from taking any kind of direct damage by taking the hit in their stead (will not work for area of effect {abilities} if the protector is already a target of the {ability}).
+
+KNIG-A3=Taunt
+KNIG-A3-desc={status-negative}
+
+KNIG-A4=Defensive Hit
+KNIG-A4-desc={load=damage-single-opener}. Deals more damage the higher the character's {def} value is.
+
+KNIG-A5=Chivalrous Spirit
+KNIG-A5-desc=Grants {addpositive} to the character.
+
+; TODO: better name
+KNIG-A6=Heavy Hit
+KNIG-A6-desc=Deals damage equal to 1/3 of the target's current {HP}.
+
+KNIG-A7=One for All
+KNIG-A7-desc=Ends your turn. Every time an ally takes a single-target offensive action on a target within your weapon's range, you will follow up with a {regular-attack} on that target.
+
+; Passives
+KNIG-P1=No Flank
+KNIG-P1-desc=Character does not incur extra damage when being targeted from the sides or the back.
+
+KNIG-P2=Doublehand
+KNIG-P2-desc=Character can wield any one-handed melee weapon with two hands for extra damage.
+
+; Counter
+KNIG-C1=Thorns
+KNIG-C1-desc=Grants {positive-thorns} to the character after being targeted by any damaging offensive action.
+
+; ********************************
+; Templar
+; ********************************
+; Job
+BLAD-Title=Templar
+BLAD-Ability=Holy Justice
+BLAD-Desc=These noble and valiant champions fight to purge corruption from the land. They sacrifice themselves without hesitation in the name of a greater cause.
+
+; Abilities
+BLAD-A1=Cleansing Blade
+BLAD-A1-desc={load=damage-single-opener} and dispels all {buffs}. Deals increased damage for each {buff} dispelled.
+
+BLAD-A2=Holy Chant
+BLAD-A2-desc={damage-burst}
+
+BLAD-A3=Soothing Chant
+BLAD-A3-desc={load=heal-small-opener} to the character and all adjacent targets.
+
+BLAD-A4=Emboldening Chant
+BLAD-A4-desc=Grants {addpositive} to the character and all adjacent targets.
+
+BLAD-A5=Righteous Blade
+BLAD-A5-Desc={damage-single}
+
+BLAD-A6=Rapturous Chant
+BLAD-A6-desc=Sacrifices the character's life to heal all allies by a large amount as well as remove {removenegative} from all allies.
+
+BLAD-A7=Siphon
+BLAD-A7-desc={damage-single-opener}'s {mp} and absorbs it.
+
+; Passives
+BLAD-P1=Defense Expert
+BLAD-P1-desc=Increases the character's {def} value.
+
+BLAD-P2=Equip Shield
+BLAD-P2-desc=Allows the character to equip a shield, regardless of the currently selected {jobterm}.
+
+; Counter
+BLAD-C1=Evade Melee
+BLAD-C1-desc=Character always evades any {regular-melee-attack}.
+
+
+; ********************************
+; Tempest
+; ********************************
+; Job
+TEMP-Title=Duelist
+TEMP-Ability=Flourish
+TEMP-Desc=Duelists are unmatched in the art of one-on-one combat. Their unending quest for perfection has granted them some of the deadliest techniques known.
+
+; Abilities
+TEMP-A1=Flowing Flourish
+TEMP-A1-desc={damage-single}
+
+TEMP-A2=Blazing Flourish
+TEMP-A2-desc={damage-single}
+
+TEMP-A3=Hard Flourish
+TEMP-A3-desc={damage-single}
+
+TEMP-A4=Thundering Flourish
+TEMP-A4-desc={damage-single}
+
+TEMP-A5=Falcon Flourish
+TEMP-A5-desc={load=damage-single-opener} from a distance.
+
+TEMP-A6=Revival
+TEMP-A6-desc={revive-ally}
+
+TEMP-A7=Crippling Flourish
+TEMP-A7-desc={damage-with-chance-negative}
+
+; Passives
+TEMP-P1=Leech Life
+TEMP-P1-desc=Character's {regular-attacks} absorb some of the damage dealt.
+
+TEMP-P2=Perfect Focus
+TEMP-P2-desc=Character deals increased damage with full {hp}.
+
+; Counter
+TEMP-C1=Evade Skill
+TEMP-C1-desc=Character always evades any offensive {skill}.
+
+
+; ********************************
+; Reaver
+; ********************************
+; Job
+REAV-Title=Reaver
+REAV-Ability=Brutality
+REAV-Desc=These wild warriors charge wildly into battle, heedless of their own safety. Their brutality is unmatched.
+
+; Abilities
+REAV-A1=Primal Cry
+REAV-A1-desc={multi-damage-with-negative}
+
+REAV-A2= Desperate Blow
+REAV-A2-desc=Deals as much damage as the character is missing {hp}.
+
+REAV-A3=Whirling Blow
+REAV-A3-desc={damage-burst}
+
+REAV-A4=Reckless Blow
+REAV-A4-desc={load=damage-single-opener}, but also damages the character by 1/4 of the damage dealt.
+
+REAV-A5=Primal Blow
+REAV-A5-desc={load=damage-single-opener} from a distance.
+
+REAV-A6=Primal Wave
+REAV-A6-desc={damage-aoe}
+
+; TODO: better name
+REAV-A7=Spread Pain
+REAV-A7-desc=Transfers all of the character's {debuffs} to the target.
+
+; Passives
+REAV-P1=Bloodlust
+REAV-P1-desc=Damage dealt increases the lower the character's current {hp} is.
+
+REAV-P2=Deep Wounds
+REAV-P2-desc={regular-attacks} that land a {critical-hit} inflict {negative-bleed} on the target.
+
+; Counter
+REAV-C1=Critical: Rebirth
+REAV-C1-Desc=Grants {positive-rebirth} {status-positive-critical-counter-append}
+
+; ********************************
+; Assassin
+; ********************************
+; Job
+ASSA-Title=Assassin
+ASSA-Ability=Lethality
+ASSA-Desc=Trained for morally questionable endeavors, Assassins have numerous creative methods for neutralizing their target. Whether striking from the shadows or wielding two weapons, they are formidable foes.
+
+; Abilities
+ASSA-A1=Assassinate
+ASSA-A1-desc={damage-single-range-chance-negative}
+
+ASSA-A2=Mirage
+ASSA-A2-desc=Grants {addpositive} to the character.
+
+ASSA-A3=Dispel Powder
+ASSA-A3-desc=Removes {removepositive} from the target.
+
+ASSA-A4=Sleep Powder
+ASSA-A4-Desc={damage-line-negative}
+
+ASSA-A5=Collect Bounty
+ASSA-A5-desc={load=damage-single-opener} and yields an extra {resource} if the character lands a killing blow on a {human} target.
+
+ASSA-A6=Blind Powder
+ASSA-A6-desc={damage-single-range-chance-negative}
+
+ASSA-A7=Sabotage
+ASSA-A7-desc=Character exchanges position on the map with the target.
+
+; Passives
+ASSA-P1=Cautious Step
+ASSA-P1-desc=Character is immune to traps.
+
+ASSA-P2=Dual Wield
+ASSA-P2-desc=Character can equip two weapons or two shields at the same time.
+
+; Counter
+ASSA-C1=Critical: Mirage
+ASSA-C1-desc=Grants {positive-mirage} {status-positive-critical-counter-append}
+
+; ********************************
+; Ranger
+; ********************************
+; Job
+RANG-Title=Ranger
+RANG-Ability=Survival
+RANG-Desc=These survivalists have honed their skill in archery to deadly effect.
+
+; Abilities
+RANG-A1=Rain of Arrows
+RANG-A1-desc={damage-line}
+
+RANG-A2=Scout
+RANG-A2-desc=Reveals all traps in a {trap-reveal-size} radius around the character.
+
+RANG-A3=Collect Pelt
+RANG-A3-desc={load=damage-single-opener} and yields extra {resources} if the character lands a killing blow on a {monster} target.
+
+RANG-A4=Multishot
+RANG-A4-desc={damage-aoe}
+
+RANG-A5=Knee Shot
+RANG-A5-desc={damage-with-chance-negative}
+
+RANG-A6=Balm
+RANG-A6-desc={status-negative-remove}
+
+RANG-A7=Sniper Shot
+RANG-A7-desc=Deals {powerratio} {elem} damage to the target, but will inflict {negative-root} on the character.
+
+; Passives
+RANG-P1=Know Weakness
+RANG-P1-desc=Increases the character's chances of landing a {critical-hit}.
+
+RANG-P2=Evasion Up
+RANG-P2-desc=Increases the character's {eva} value.
+
+; Counter
+RANG-C1=Evade Ranged
+RANG-C1-desc=Character always evades any {regular-ranged-attack}.
+
+
+; ********************************
+; Rogue
+; ********************************
+; Job
+ROGU-Title=Scoundrel
+ROGU-Ability=Trickery
+ROGU-Desc=Tricksters who eschew brute strength in favor of speed and nimbleness. They are adept at acquiring what others possess.
+
+; Abilities
+ROGU-A1=Steal GP
+ROGU-A1-desc=Attempts to steal {currency} from the target.
+
+ROGU-A2=Steal Item
+ROGU-A2-desc=Attempts to steal a consumable item from the target (the item will be added to the character's team item count for this encounter).
+
+ROGU-A3=Steal Component
+ROGU-A3-desc=Attempts to steal a {resource} from the target.
+
+ROGU-A4=Steal Buffs
+ROGU-A4-desc=Attempts to steal {buffs} from the target.
+
+ROGU-A5=Fleet of Foot
+ROGU-A5-desc=Grants the character +2 movement for the rest of their turn (this should be used before moving).
+
+ROGU-A6=Sneak Attack
+ROGU-A6-desc={load=damage-single-opener}. The attack deals significantly increased damage from the sides or the back, but is weak from the front.
+
+ROGU-A7=Dirty Hit
+ROGU-A7-desc={damage-with-chance-negative}
+
+; Passives
+ROGU-P1=Attack Expert
+ROGU-P1-desc=Increases the character's {atk} value.
+
+ROGU-P2=Exploit Weakness
+ROGU-P2-desc=When the character lands a {critical-hit}, they regain a portion of their maximum {hp} and {mp}.
+
+; Counter
+ROGU-C1=Steal
+ROGU-C1-desc={counter-offensive-action-adjacent} by attempting to steal a {resource} (enemies will steal an {item} instead).
+
+
+; ********************************
+; Gunner
+; ********************************
+; Job
+GUNN-Title=Gunner
+GUNN-Ability=Bullet Infusion
+GUNN-Desc=Expert sharpshooters who disable their targets from afar.
+
+; Abilities
+GUNN-A1=Focus
+GUNN-A1-desc=The character's next offensive action will deal double damage.
+
+GUNN-A2=Blinding Bullet
+GUNN-A2-Desc={damage-with-chance-negative}
+
+GUNN-A3=Crippling Bullet
+GUNN-A3-Desc={damage-with-chance-negative}
+
+GUNN-A4=Silencing Bullet
+GUNN-A4-Desc={damage-with-chance-negative}
+
+GUNN-A5=Enraging Bullet
+GUNN-A5-Desc={damage-with-chance-negative}
+
+GUNN-A6=Opportunistic Bullet
+GUNN-A6-desc={load=damage-single-opener}. {damage-increase-with-debuff}
+
+GUNN-A7=Magic Bullet
+GUNN-A7-Desc={damage-single}
+
+; Passives
+GUNN-P1=Life Font
+GUNN-P1-desc=Character recovers {hp} with each step taken.
+
+GUNN-P2=Height Advantage
+GUNN-P2-desc=Increases damage done by {powerratio} for each height value the character has over the target.
+
+; Counter
+GUNN-C1=Teleport Other
+GUNN-C1-desc={counter-offensive-action-adjacent} by teleporting the offender to a random location on the map.
+
+
+; ********************************
+; Peddler
+; ********************************
+; Job
+PEDD-Title=Peddler
+PEDD-Ability=Peddle
+PEDD-Desc=Relying on their wits, Peddlers prefer to stay out of direct combat. They set clever traps and know how to get the most value out of items.
+
+; Abilities
+PEDD-A1=Immobilizing Trap
+PEDD-A1-desc={trap-status}
+
+PEDD-A2=Lacerating Trap
+PEDD-A2-desc={trap-status}
+
+PEDD-A3=Painful Trap
+PEDD-A3-desc=Character lays down a trap that will damage an enemy stepping on it for 1/2 of their current {hp} and immediately end their turn.
+
+PEDD-A4=Alluring Trap
+PEDD-A4-desc={trap-status}
+
+PEDD-A5=Patented Usage
+PEDD-A5-desc=The selected item will be used on a {size} area (can't be used with {item-raisepotion}).
+
+PEDD-A6=Critical Expertise
+PEDD-A6-desc={status-positive}
+
+PEDD-A7=Sales Pitch
+PEDD-A7-Desc={status-aoe-positive}
+
+; Passives
+PEDD-P1=Quick Fingers
+PEDD-P1-desc=Situational commands (such as {command-open}, {command-gather}, {command-climb}, {command-activate}, etc.) do not cost an action to use.
+
+PEDD-P2=Item Potency
+PEDD-P2-desc=When using an item (with the {command-item} command), it will have double the potency.
+
+; Counter
+PEDD-C1=Critical: Quicken
+PEDD-C1-desc=Grants the character an immediate turn when {hp} is {critical-hp} after taking damage.
+
+; ********************************
+; Mender
+; ********************************
+; Job
+HEAL-Title=Mender
+HEAL-Ability=Holy Magic
+HEAL-Desc=Medics who specialize in using Holy Magic to keep their allies healthy and alive.
+
+; Abilities
+HEAL-A1=Heal I
+HEAL-A1-desc={heal-single}
+
+HEAL-A2=Heal II
+HEAL-A2-desc={heal-single}
+
+HEAL-A3=Mass Heal I
+HEAL-A3-desc={heal-aoe}
+
+HEAL-A4=Revive I
+HEAL-A4-desc={revive-ally}
+
+HEAL-A5=Revive II
+HEAL-A5-desc={revive-ally}
+
+HEAL-A6=Panacea II
+HEAL-A6-desc={status-negative-remove}
+
+HEAL-A7=Rebirth
+HEAL-A7-desc={status-positive}
+
+; Passives
+HEAL-P1=Blessed One
+HEAL-P1-desc=Every time the character uses a single target healing {ability} on a target other than themselves, they are healed for {powerratio} of the amount.
+
+HEAL-P2=Mana Font
+HEAL-P2-desc=Character recovers {mp} with each step taken.
+
+; Counter
+HEAL-C1=Renew
+HEAL-C1-desc=Grants {positive-renew} to the character after being targeted by any damaging offensive action.
+
+
+; ********************************
+; Alchemystic
+; ********************************
+; Job
+ALCH-Title=Alchemystic
+ALCH-Ability=Soul Magic
+ALCH-Desc=These mystics wield Soul Magic to support and empower their allies.
+
+; Abilities
+ALCH-A1=Barrier
+ALCH-A1-desc={status-aoe-positive}
+
+ALCH-A2=Shield
+ALCH-A2-desc={status-aoe-positive}
+
+ALCH-A3=Aegis
+ALCH-A3-desc={status-aoe-positive}
+
+ALCH-A4=Mass Renew
+ALCH-A4-desc={status-aoe-positive}
+
+ALCH-A5=Haste
+ALCH-A5-desc={status-positive}
+
+ALCH-A6=Mass Haste
+ALCH-A6-desc={status-aoe-positive}
+
+ALCH-A7=Refresh
+ALCH-A7-desc=Refreshes the duration of {buffs} on targets in a {size} area.
+
+ALCH-A8=Thorns
+ALCH-A8-desc={status-positive}
+
+; Passives
+ALCH-P1=Resistance Expert
+ALCH-P1-desc=Increases the character's {res} value.
+
+ALCH-P2=Fortitude
+ALCH-P2-desc=Character is immune to {injury}.
+
+; Counter
+ALCH-C1=Mystic Shield
+ALCH-C1-desc=Taking damage will deplete the character's {mp} instead of their {hp} if they have any.
+
+
+; ********************************
+; Sorcerer
+; ********************************
+; Job
+SORC-Title=Sorcerer
+SORC-Ability=Lay Waste
+SORC-Desc=These archmages indiscriminately lay waste to the entire battlefield with raw elemental power.
+
+; Abilities
+SORC-A1     =Hailstorm
+SORC-A1-desc={damage-all}
+
+SORC-A2     =Firestorm
+SORC-A2-desc={damage-all}
+
+SORC-A3     =Meteorstorm
+SORC-A3-desc={damage-all}
+
+SORC-A4     =Thunderstorm
+SORC-A4-desc={damage-all}
+
+SORC-A5     =Darkstorm
+SORC-A5-desc={damage-all}
+
+SORC-A6     =Holystorm
+SORC-A6-desc={damage-all}
+
+SORC-A7     =Voidstorm
+SORC-A7-desc={damage-all}
+
+; Passives
+SORC-P1     =Economy
+SORC-P1-desc=All abilities with a {mp} cost have that cost reduced by 1/2.
+
+SORC-P2     =Arcane Sight
+SORC-P2-desc=Increases the character's accuracy when taking any offensive action (does not apply to Steal {abilities}).
+
+; Counter
+SORC-C1     =Root
+SORC-C1-desc={counter-with-negative-status} {negative-root}.
+
+
+; ********************************
+; Utility
+; ********************************
+; Job
+UTIL-Title=Plague Doctor
+UTIL-Ability=Treatment
+UTIL-Desc=Learned and versatile surgeons who put their knowledge of medicine to great use, be it to help or harm.
+
+; Abilities
+UTIL-A1=Recovery
+UTIL-A1-desc={load=heal-aoe-opener} and removes {removenegative}.
+
+UTIL-A2=Dispel
+UTIL-A2-desc=Removes {removepositive} in a {size} area.
+
+UTIL-A3=Weaken
+UTIL-A3-desc={status-chance-negative-aoe}
+
+UTIL-A4=Total Shield
+UTIL-A4-desc={status-positive}
+
+UTIL-A5=Poison
+UTIL-A5-Desc={damage-with-chance-negative}
+
+UTIL-A6=Insight
+UTIL-A6-desc=Grants {addpositive} to the character and all adjacent targets.
+
+UTIL-A7=Slow
+UTIL-A7-desc={status-chance-negative-aoe}
+
+; Passives TODO: find better names.
+UTIL-P1=Equip Heavy
+UTIL-P1-desc=Allows the character to equip heavy gear, regardless of the currently selected {jobterm}.
+
+UTIL-P2=Into the Fray
+UTIL-P2-desc=Damage dealt increases for every adjacent enemy.
+
+; Counter
+UTIL-C1=Magic
+UTIL-C1-desc=Counters any offensive {spell} cast on the character by casting it back at the attacker.
+
+
+; ********************************
+; Wizard
+; ********************************
+; Job
+WIZA-Title=Wizard
+WIZA-Ability=Elementalism
+WIZA-Desc=These spell-slingers can take out large groups of enemies at once by unleashing destructive magic upon the battlefield.
+
+; Abilities
+WIZA-A1=Water I
+WIZA-A1-desc={damage-aoe}
+
+WIZA-A2=Fire I
+WIZA-A2-desc={damage-aoe}
+
+WIZA-A3=Earth I
+WIZA-A3-desc={damage-aoe}
+
+WIZA-A4=Thunder I
+WIZA-A4-desc={damage-aoe}
+
+WIZA-A5=Water II
+WIZA-A5-desc={damage-aoe}
+
+WIZA-A6=Fire II
+WIZA-A6-desc={damage-aoe}
+
+WIZA-A7=Earth II
+WIZA-A7-desc={damage-aoe}
+
+WIZA-A8=Thunder II
+WIZA-A8-desc={damage-aoe}
+
+WIZA-A9=Water Locus
+WIZA-A9-desc={damage-single}
+
+WIZA-A10=Fire Locus
+WIZA-A10-desc={damage-single}
+
+WIZA-A11=Earth Locus
+WIZA-A11-desc={damage-single}
+
+WIZA-A12=Thunder Locus
+WIZA-A12-desc={damage-single}
+
+; Passives
+WIZA-P1=Smart Casting
+WIZA-P1-desc=Offensive {abilities} will not include allies as possible targets.
+
+WIZA-P2=Boon
+WIZA-P2-desc=Character restores a portion of their maximum {hp} and {mp} for every foe they fell in battle.
+
+; Counter
+WIZA-C1=Adaptive Affinity
+WIZA-C1-desc=When the character is dealt elemental damage, they gain a {buff} that increases their own damage output with that {element} (only one such {buff} at a time).
+;Character deals increased damage when using the same {element} as the last they were damaged with.
+
+
+; ********************************
+; Druid
+; ********************************
+; Job
+DRUI-Title=Druid
+DRUI-Ability=Duality
+DRUI-Desc=Representing the duality in all things, Druids dabble in both the destructive and curative facets of magic. Though they do not excel in any one area, they are well-rounded and can eventually learn to cast two spells at once.
+
+; Abilities
+DRUI-A6=Panacea I
+DRUI-A6-Desc={status-negative-remove}
+
+DRUI-A7=Lesser Shield
+DRUI-A7-desc={status-positive}
+
+DRUI-A8=Lesser Aegis
+DRUI-A8-desc={status-positive}
+
+; Passives
+DRUI-P1=Mind Expert
+DRUI-P1-desc=Increases the character's {mnd} value.
+
+DRUI-P2=Double Cast
+DRUI-P2-desc=Allows the character to cast two {spells} during their turn, but at 75% power each.
+
+; Counter
+DRUI-C1=Barrier
+DRUI-C1-desc=Grants {positive-barrier} to the character after being targeted by any offensive action.
+
+
+; ********************************
+; Fellblade
+; ********************************
+; Job
+FELL-Title=Fellblade
+FELL-Ability=Dark Blade
+FELL-Desc=These reclusive warriors are adept at anointing their blades with a mix of deadly toxins.
+
+; Abilities
+FELL-A1=Poison Slice
+FELL-A1-Desc={damage-with-chance-negative}
+
+FELL-A2=Bleed Slice
+FELL-A2-Desc={damage-with-chance-negative}
+
+FELL-A3=Black Blade
+FELL-A3-Desc={damage-line-negative}
+
+FELL-A4=Cripple Slice
+FELL-A4-desc={damage-with-chance-negative}
+
+FELL-A5=Mute Slice
+FELL-A5-desc={damage-with-chance-negative}
+
+FELL-A6=Miasma
+FELL-A6-desc={damage-aoe-opener} and spreads any {debuff} from the main target to other targets in a {size} area.
+
+FELL-A7=Health Siphon
+FELL-A7-desc={load=damage-single-opener} and absorbs the damage dealt. Deals more damage the more {debuffs} the target is inflicted with.
+
+; Passives
+FELL-P1=Malice
+FELL-P1-desc=Increases the accuracy of inflicting {debuffs}.
+
+FELL-P2=Versatile
+FELL-P2-desc=Allows the character's {skills} and {spells} to inflict {critical-hits}.
+
+; Counter
+FELL-C1=Evade Magic
+FELL-C1-desc=Character always evades any offensive {spell}.
+
+
+; ********************************
+; Warmage
+; ********************************
+; Job
+WARM-Title=Warmage
+WARM-Ability=Battle Magic
+WARM-Desc=Warmages earned their name by wading into the thick of battle, fusing magic and weaponry to devastating effect. These masters of both body and mind embody the concept of "high risk, high reward."
+
+; Abilities
+WARM-A1=Water Bolt
+WARM-A1-desc={damage-single}
+
+WARM-A2=Fire Bolt
+WARM-A2-desc={damage-single}
+
+WARM-A3=Earth Bolt
+WARM-A3-desc={damage-single}
+
+WARM-A4=Thunder Bolt
+WARM-A4-desc={damage-single}
+
+WARM-A5=Infused Edge
+WARM-A5-desc=Deals a {regular-attack} to the target and then follows it up with a single-target version of any {spell} casted directly on the target (regardless of the spell's usual targeting style).
+
+WARM-A6=Water Burst
+WARM-A6-desc={damage-burst}
+
+WARM-A7=Fire Burst
+WARM-A7-desc={damage-burst}
+
+WARM-A8=Earth Burst
+WARM-A8-desc={damage-burst}
+
+WARM-A9=Thunder Burst
+WARM-A9-desc={damage-burst}
+
+WARM-A10=Stasis Burst
+WARM-A10-desc={load=status-chance-negative-aoe-opener} around the character.
+
+WARM-A11=Pulsar
+WARM-A11-desc={damage-single}
+
+; Passives
+WARM-P1=Elemental Mastery
+WARM-P1-desc=Decreases the resistance to elements of the targets of any offensive {spells} that do {element-fire}, {element-water}, {element-earth} or {element-thunder} damage.
+
+WARM-P2=Leech Mana
+WARM-P2-desc=Character's {regular-attacks} convert some of the damage dealt into {mp}.
+
+; Counter
+WARM-C1=Critical: Haste
+WARM-C1-desc=Grants {positive-haste} {status-positive-critical-counter-append}
+
+
+; ********************************
+; Gambler
+; ********************************
+; Job
+GAMB-Title=Gambler
+GAMB-Ability=Lady Luck
+GAMB-Desc=Knowing that even the best-laid plans are subject to the whims of Lady Luck, Gamblers have found ways to manipulate the forces of chance in their favor.
+
+; Abilities
+GAMB-A1=Wild Card: S
+GAMB-A1-desc=Usually inflicts a random number of {debuffs} on a single target.
+
+GAMB-A2=Wild Card: C
+GAMB-A2-desc=Usually grants a random number of {buffs} to a single target.
+
+GAMB-A3=Wild Card: D
+GAMB-A3-desc=Usually deals a random amount of damage to a single target.
+
+GAMB-A4=Wild Card: H
+GAMB-A4-desc=Usually restores a random amount of {hp} to a single target.
+
+GAMB-A5=Pile On
+GAMB-A5-desc=Refreshes the duration of all {debuffs} on targets in a {size} area.
+
+GAMB-A6=Quicken
+GAMB-A6-desc=Grants the target an immediate turn.
+
+GAMB-A7=Allure
+GAMB-A7-desc={status-negative}
+
+; Passives
+GAMB-P1=Initiative
+GAMB-P1-desc=Character starts the battle ready to take an action.
+
+GAMB-P2=Lucky
+GAMB-P2-desc=Gives you that extra bit of luck you'll need to get various things done.
+
+; Counter
+GAMB-C1=Fleet of Foot
+GAMB-C1-desc=Grants {positive-fleetfoot} to the character after being targeted by any offensive action.
+
+
+; ********************************
+; Gadgeteer
+; ********************************
+; Job
+GADG-Title=Gadgeteer
+GADG-Ability=Engineering
+GADG-Desc=These tinkers have invented all manner of technological marvels. As long as they have crafted the right tool for the job, they are ready for anything.
+
+; Abilities
+GADG-A0=Gadgets
+GADG-A0-desc=Use a variety of high-tech gadgets for a versatile arsenal. Gadgets must be crafted or found before they can be used.
+
+GADG-A1=Spring Glove
+GADG-A1-Desc={MERC-A2-desc}
+
+GADG-A2=Spiked Glove
+GADG-A2-desc=Deals {elem} damage that ignores the target's defense.
+
+GADG-A3=Music Box
+GADG-A3-Desc={status-chance-negative-aoe}
+
+GADG-A4=Shock Box
+GADG-A4-desc={status-positive}
+
+GADG-A5=Glowing Ball
+GADG-A5-desc={status-aoe-positive}
+
+GADG-A6=Spirit Breaker
+GADG-A6-desc={status-chance-negative}
+
+GADG-A7=Radiant Ball
+GADG-A7-desc=Restores {power} {mp} to the target.
+
+GADG-A8=Surprise Box
+GADG-A8-desc={status-chance-negative-aoe}
+
+GADG-A9=Spirit Infuser
+GADG-A9-desc={status-positive}
+
+GADG-A10=Spiked Shell
+GADG-A10-Desc={status-positive}
+
+GADG-A11=Tiny Black Hole
+GADG-A11-desc=Deals {powerratio} {elem} damage to the target's {mp}.
+
+GADG-A12=Bean Bag
+GADG-A12-Desc={damage-with-chance-negative}
+
+GADG-A13=Pulsar Generator
+GADG-A13-desc={damage-aoe}
+
+GADG-A14=???
+GADG-A14-Desc={ASSA-A3-desc}
+
+GADG-A15=???
+GADG-A15-desc={load=heal-small-opener} and removes {removenegative}.
+
+; Passives
+GADG-P1=Life Expert
+GADG-P1-desc=Increases the character's maximum {hp} value.
+
+GADG-P2=Mana Expert
+GADG-P2-desc=Character starts combat with {power} {mp} instead of 0.
+
+; Counter
+GADG-C1=Absorb {MP}
+GADG-C1-desc=When character is targeted by an offensive {ability} that has an {mp} cost, they gain the same amount of {mp} that was used.
+
+
+; --------------- Story Classes -------------------
+; ********************************
+; Marked
+; ********************************
+; helper text
+dmg-quarter-self=damages the character by 1/4 of their current {hp}
+
+MARK-Title=Marked
+MARK-Ability=Ancient Power
+MARK-Desc=One who has been selected as a candidate for the title of {immortal}. Their power increases as they draw energy from each {relic} in the land.
+
+MARK-A1     =Dark Bolt
+MARK-A1-desc={load=damage-single-opener} from a distance.
+
+MARK-A2     =TBD
+MARK-A2-desc={load=damage-single-opener}, but also {dmg-quarter-self}.
+
+MARK-A3     =TBD Line
+MARK-A3-desc={damage-line}
+
+MARK-A4     =TBD HP
+MARK-A4-desc={load=damage-single-opener} and absorbs the damage dealt.
+
+MARK-A5     =TBD MP
+MARK-A5-desc={BLAD-A7-desc}
+
+MARK-A6     =TBD Burst
+MARK-A6-desc={damage-burst} Also {dmg-quarter-self}.
+
+MARK-A7     =TBD Burst 2
+MARK-A7-desc={damage-burst}
+
+MARK-P1     =Execute
+MARK-P1-desc={ANAT-P1-desc}
+
+MARK-P2     =Avenger
+MARK-P2-desc=Character gains {powerratio} bonus damage and {power2ratio} damage reduction for each dead ally (up to {locterm} stacks).
+
+MARK-C1     =Slow
+MARK-C1-desc={counter-with-negative-status} {negative-slow}.
+
+
+; ********************************
+; Anatomist
+; ********************************
+ANAT-Title=Anatomist
+ANAT-Ability=Anatomy
+ANAT-Desc=One who has devoted all their efforts in the pursuit of knowledge about death and how to overcome it. They are adept both at healing and harming.
+
+ANAT-A1     =Reanimate
+ANAT-A1-Desc=Resurrects a dead enemy as a {UND-01-Title} that will attack foes until it falls. This will prevent the target unit from being revived by their own allies.
+
+ANAT-A2     =Dark I
+ANAT-A2-Desc={damage-aoe}
+
+ANAT-A3     =Dark II
+ANAT-A3-Desc={damage-aoe}
+
+ANAT-A4     =Dark Locus
+ANAT-A4-Desc={damage-single}
+
+ANAT-P1     =Pain Points
+ANAT-P1-desc=Damage is increased by {powerratio} when target's {hp} is below {locterm}x of their maximum.
+
+ANAT-P2     =Legendary Healer
+ANAT-P2-desc=Healing is increased by {powerratio}.
+
+ANAT-C1     =Cripple
+ANAT-C1-desc={counter-offensive-action-adjacent} {counter-by-inflicting} {negative-cripple}.
+
+
+; ********************************
+; Demon Knight
+; ********************************
+DEMK-Title=Demon Knight
+DEMK-Ability=Rage
+DEMK-Desc=A knight corrupted by a {relic}'s dark energies. They brutally decimate the battlefield, gaining great momentum for every foe felled.
+
+DEMK-A1     =Enraged Blow
+DEMK-A1-Desc={load=damage-single-opener}, but also {dmg-quarter-self}.
+
+DEMK-A2     =Vicious Slash
+DEMK-A2-Desc={damage-line-opener}. Also {dmg-quarter-self}.
+
+DEMK-A3     =???
+DEMK-A3-Desc={MERC-A2-Desc}
+
+DEMK-A4     =Rend
+DEMK-A4-Desc={damage-with-negative}
+
+DEMK-A5     =Demonic Might
+DEMK-A5-desc={status-positive} Also {dmg-quarter-self}.
+
+DEMK-A6     =???
+DEMK-A6-desc={damage-burst} Also {dmg-quarter-self}.
+
+DEMK-A7     =Corrupted Blade
+DEMK-A7-desc={damage-single} Also {dmg-quarter-self}.
+
+DEMK-P1     =Cleave
+DEMK-P1-desc=Character gets another turn after felling an enemy (only occurs once per natural turn).
+
+DEMK-P2     =Focused Rage
+DEMK-P2-desc={regular-attacks} use all current {mp} to inflict more damage.
+
+DEMK-C1     =Mute
+DEMK-C1-desc=Counters any offensive action taken on the character by a unit from range {counter-by-inflicting} {negative-mute}.
+
+
+; ********************************
+; Bounter Hunter
+; ********************************
+BHUN-Title=Bounty Hunter
+BHUN-Ability=Huntress
+
+BHUN-A1     =Net
+BHUN-A1-desc={status-negative}
+
+
+; --------------- Extra Classes -------------------
+; ********************************
+; Werewolf
+; ********************************
+WERE-Title=Werewolf
+WERE-Ability=Savagery
+WERE-Desc=TODO
+
+WERE-A1=Temp
+WERE-A1-Desc=Temp
+
+WERE-P1=Charged Blows
+WERE-P1-desc=Character expends all of their remaining {mp} to increase damage when using {regular-attacks}.
+
+
+; --------------- Enemy Classes -------------------
+; ********************************
+; Noble
+; ********************************
+NOBL-Title=Noble
+NOBL-Ability=Countenance
+NOBL-Desc=
+
